@@ -4,10 +4,21 @@ version = "0.1.0"
 edition = "2021"
 
 [workspace]
-members = ["crates/sub_lib", "crates/main_lib"]
+members = [
+    "crates/sub_lib",
+    "crates/main_lib",
+    "crates/sub_lib_test",
+    "crates/main_lib_test",
+]
 resolver = "2"
 
 [workspace.dependencies]
+main_lib = { path = "crates/main_lib" }
+main_lib_test = { path = "crates/main_lib_test" }
 sub_lib = { path = "crates/sub_lib" }
+sub_lib_test = { path = "crates/sub_lib_test" }
 cucumber = { version = "0.21", features = ["libtest"] }
 tokio = { version = "1.40", features = ["full"] }
+
+[dependencies]
+main_lib = { workspace = true }

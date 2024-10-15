@@ -1,5 +1,6 @@
-use sub_lib::uat::AnimalWorld;
 use cucumber::World;
+use sub_lib::Cat;
+use sub_lib_test::AnimalWorld;
 
 // This runs before everything else, so you can setup things here.
 #[tokio::main]
@@ -8,5 +9,9 @@ async fn main() {
     // You may even have an `async` main, it doesn't matter. The point is that
     // Cucumber is composable. :)
 
-    AnimalWorld::cucumber().run_and_exit("tests/features/").await;
+    let _cat = Cat::default();
+
+    AnimalWorld::cucumber()
+        .run_and_exit("tests/features/")
+        .await;
 }

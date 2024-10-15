@@ -1,5 +1,5 @@
 use cucumber::*;
-use crate::Cat;
+use sub_lib::Cat;
 
 // `World` is your shared, likely mutable state.
 // Cucumber constructs it via `Default::default()` for each scenario.
@@ -13,7 +13,6 @@ pub struct AnimalWorld {
 fn hungry_cat(world: &mut AnimalWorld) {
     world.cat.hungry = true;
 }
-
 
 #[when("I feed the cat")]
 fn feed_cat(world: &mut AnimalWorld) {

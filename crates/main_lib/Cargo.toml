@@ -1,0 +1,21 @@
+[package]
+name = "main_lib"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+sub_lib = { workspace = true }
+cucumber = { workspace = true, optional = true }
+
+[dev-dependencies]
+tokio = { workspace = true }
+
+[[test]]
+name = "uat"
+harness = false
+required-features = ["uat"]
+
+[features]
+default = []
+uat = ["dep:cucumber", "sub_lib/uat"]
+

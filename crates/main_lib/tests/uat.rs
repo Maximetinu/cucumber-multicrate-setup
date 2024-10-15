@@ -2,6 +2,11 @@ use cucumber::World;
 use sub_lib::Cat;
 use uat::sub_lib::context::AnimalWorld;
 
+// If I uncomment this, I can reach those functions from my code
+// So they should be visible from this crate for cucumber
+// However, they are not
+// use uat::sub_lib::steps::*;
+
 // This runs before everything else, so you can setup things here.
 #[tokio::main]
 async fn main() {

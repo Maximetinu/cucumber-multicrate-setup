@@ -4,7 +4,11 @@ opt-level = 3
 
 [profile.dev]
 opt-level = 1
-#
+
+# Uncomment this, and running `cargo test` in main_lib folder will work
+# Otherwise, main_lib cucumber tests are skipped
+# I can't make them visible even if I make them pub
+# This must be a bug on cucumber side!
 #[profile.test]
 #opt-level = 0
 

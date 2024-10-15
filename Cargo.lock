@@ -606,8 +606,8 @@ version = "0.1.0"
 dependencies = [
  "cucumber",
  "sub_lib",
- "sub_lib_gherkin",
  "tokio",
+ "uat",
 ]
 
 [[package]]
@@ -969,14 +969,6 @@ name = "sub_lib"
 version = "0.1.0"
 
 [[package]]
-name = "sub_lib_gherkin"
-version = "0.1.0"
-dependencies = [
- "cucumber",
- "sub_lib",
-]
-
-[[package]]
 name = "syn"
 version = "2.0.79"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1108,6 +1100,14 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn",
+]
+
+[[package]]
+name = "uat"
+version = "0.1.0"
+dependencies = [
+ "cucumber",
+ "sub_lib",
 ]
 
 [[package]]

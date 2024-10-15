@@ -7,7 +7,7 @@ edition = "2021"
 sub_lib = { workspace = true }
 
 [dev-dependencies]
-sub_lib_gherkin = { workspace = true }
+uat = { workspace = true }
 cucumber = { workspace = true }
 tokio = { workspace = true }
 

@@ -1,5 +1,5 @@
 [package]
-name = "sub_lib_gherkin"
+name = "uat"
 version = "0.1.0"
 edition = "2021"
 

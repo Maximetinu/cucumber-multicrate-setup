@@ -604,17 +604,9 @@ checksum = "a7a70ba024b9dc04c27ea2f0c0548feb474ec5c54bba33a7f72f873a39d07b24"
 name = "main_lib"
 version = "0.1.0"
 dependencies = [
- "sub_lib",
-]
-
-[[package]]
-name = "main_lib_test"
-version = "0.1.0"
-dependencies = [
  "cucumber",
- "main_lib",
  "sub_lib",
- "sub_lib_test",
+ "sub_lib_gherkin",
  "tokio",
 ]
 
@@ -977,7 +969,7 @@ name = "sub_lib"
 version = "0.1.0"
 
 [[package]]
-name = "sub_lib_test"
+name = "sub_lib_gherkin"
 version = "0.1.0"
 dependencies = [
  "cucumber",

@@ -1,5 +1,5 @@
 [package]
-name = "sub_lib_test"
+name = "sub_lib_gherkin"
 version = "0.1.0"
 edition = "2021"
 

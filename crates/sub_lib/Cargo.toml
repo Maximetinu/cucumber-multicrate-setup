@@ -4,9 +4,8 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-cucumber = { workspace = true }
+cucumber = { workspace = true, optional = true }
 
 [features]
 default = []
-uat = []
-
+uat = ["dep:cucumber"]

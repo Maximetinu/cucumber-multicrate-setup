@@ -1,6 +1,6 @@
 use cucumber::World;
+use sub_lib::uat::AnimalWorld;
 use sub_lib::Cat;
-use sub_lib_gherkin::AnimalWorld;
 
 // This runs before everything else, so you can setup things here.
 #[tokio::main]

@@ -1,8 +1,0 @@
-[package]
-name = "sub_lib_gherkin"
-version = "0.1.0"
-edition = "2021"
-
-[dependencies]
-sub_lib = { workspace = true }
-cucumber = { workspace = true }

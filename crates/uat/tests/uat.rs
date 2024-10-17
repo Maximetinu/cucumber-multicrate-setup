@@ -1,6 +1,13 @@
-use cucumber::World;
 use sub_lib::Cat;
-use uat::sub_lib::context::AnimalWorld;
+
+use cucumber::*;
+
+// `World` is your shared, likely mutable state.
+// Cucumber constructs it via `Default::default()` for each scenario.
+#[derive(Debug, Default, World)]
+pub struct TestContext {
+    pub(crate) cat: Cat,
+}
 
 // This runs before everything else, so you can setup things here.
 #[tokio::main]
@@ -11,7 +18,9 @@ async fn main() {
 
     let _cat = Cat::default();
 
-    AnimalWorld::cucumber()
+    TestContext::cucumber()
         .run_and_exit("tests/features/")
         .await;
 }
+
+mod steps;

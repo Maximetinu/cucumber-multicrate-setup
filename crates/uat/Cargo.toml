@@ -6,3 +6,8 @@ edition = "2021"
 [dependencies]
 sub_lib = { workspace = true }
 cucumber = { workspace = true }
+tokio = { workspace = true }
+
+[[test]]
+name = "uat"
+harness = false
